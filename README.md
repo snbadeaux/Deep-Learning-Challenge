@@ -57,13 +57,13 @@ Using your knowledge of TensorFlow, optimize your model to achieve a target pred
 Use any or all of the following methods to optimize your model:<br>
 
 •	Adjust the input data to ensure that no variables or outliers are causing confusion in the model, such as:<br>
-o	Dropping more or fewer columns.<br>
-o	Creating more bins for rare occurrences in columns.<br>
-o	Increasing or decreasing the number of values for each bin.<br>
-o	Add more neurons to a hidden layer.<br>
-o	Add more hidden layers.<br>
-o	Use different activation functions for the hidden layers.<br>
-o	Add or reduce the number of epochs to the training regimen.<br>
+  * Dropping more or fewer columns.<br>
+  * Creating more bins for rare occurrences in columns.<br>
+  *	Increasing or decreasing the number of values for each bin.<br>
+  *	Add more neurons to a hidden layer.<br>
+  *	Add more hidden layers.<br>
+  *	Use different activation functions for the hidden layers.<br>
+  *	Add or reduce the number of epochs to the training regimen.<br>
 
 Note: If you make at least three attempts at optimizing your model, you will not lose points if your model does not achieve target performance.<br>
 
@@ -71,5 +71,44 @@ Note: If you make at least three attempts at optimizing your model, you will not
 2.	Import your dependencies and read in the charity_data.csv to a Pandas DataFrame.
 3.	Preprocess the dataset as you did in Step 1. Be sure to adjust for any modifications that came out of optimizing the model.
 4.	Design a neural network model, and be sure to adjust for modifications that will optimize the model to achieve higher than 75% accuracy.
-5.	Save and export your results to an HDF5 file. Name the file AlphabetSoupCharity_Optimization.h5.
+5.	Save and export your results to an HDF5 file. Name the file AlphabetSoupCharity_Optimization.h5.<br>
+
+# Analysis Report on the Neural Network Model
+
+1. Overview of the analysis: The purpose of the model was to create an algorithm to help predict whether or not an applicant's attempt for charity funding would be successful.
+2. Results:<br>
+Data Preprocessing
+   
+ * What variable(s) are considered the target(s) for your model?<br>
+   The variable for the Target was identified as the column IS_SUCCESSFUL.
+ * What variable(s) are considered to be the features of your model?<br>
+   The following columns were considered features of the model:
+   * NAME
+   * APPLICATION_TYPE
+   * AFFILIATION
+   * CLASSIFICATION
+   * USE_CASE
+   * ORGANIZATION
+   * STATUS
+   * INCOME_AMT
+   * SPECIAL_CONSIDERATIONS
+   * ASK_AMT
+ * What variable(s) should be removed from the input data because they are neither targets nor features?<br>
+   The column or variable that can be removed is EIN as it is an identifier for the applicant organization and has no impact on the behavior of the model.
+
+Compiling, Training, and Evaluating the Model
+
+ * How many neurons, layers, and activation functions did you select for your neural network model, and why?<br>
+   In the Optimized model, I used 3 hidden layers, as compared to the 2 from the original model. The number of neurons was not changed, although I had to add neurons to the third layer. The activation function was also not changed. Increasing the depth of the model was done since our input data seems to have complex dependencies and hierarchies.
+ * Were you able to achieve the target model performance?<br>
+   Yes, by optimization, I was able to increase the accuracy of the model from 72% to 79%.
+ * What steps did you take in your attempts to increase model performance?<br>
+   Ultimately, not eliminating the NAME column and then filtering the column to greater than 1, meaning the applicant had applied for funding more than once, along with increasing the depth of the hidden layers helped to increase the accuracy.<br>
+   
+   Although not shown, I systematically changed one or two factors at a time and ran the model to see if accuracy increased. I reset factors back to match the original model before again changing new factors. I was hoping to find that only a few small changes could be made in order to increase accuracy. Also, by changing many factors, it would be hard to pinpoint what exactly made the larger difference in accuracy levels.<br>
+   
+   
+4. Summary:<br>
+The optimized neural network model achieved 79% prediction accuracy with a 0.47 loss, 3 hidden layers at 10, 8, and 8, and 100 training epochs. Keeping the Name column was crucial in achieving and going beyond the target of 75% accuracy. This shows the importance of the shape of your datasets before you preprocess them.
+
 
