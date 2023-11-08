@@ -75,7 +75,8 @@ Note: If you make at least three attempts at optimizing your model, you will not
 
 # Analysis Report on the Neural Network Model
 
-1. Overview of the analysis: The purpose of the model was to create an algorithm to help predict whether or not an applicant's attempt for charity funding would be successful.
+1. Overview of the analysis:<br>
+   The purpose of the model was to create an algorithm to help predict whether or not an applicant's attempt for charity funding would be successful.
 2. Results:<br>
 
    Data Preprocessing
