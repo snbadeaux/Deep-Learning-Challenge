@@ -108,7 +108,7 @@ Compiling, Training, and Evaluating the Model
    Although not shown, I systematically changed one or two factors at a time and ran the model to see if accuracy increased. I reset factors back to match the original model before again changing new factors. I was hoping to find that only a few small changes could be made in order to increase accuracy. Also, by changing many factors, it would be hard to pinpoint what exactly made the larger difference in accuracy levels.<br>
    
    
-4. Summary:<br>
+3. Summary:<br>
 The optimized neural network model achieved 79% prediction accuracy with a 0.47 loss, 3 hidden layers at 10, 8, and 8, and 100 training epochs. Keeping the Name column was crucial in achieving and going beyond the target of 75% accuracy. This shows the importance of the shape of your datasets before you preprocess them.
 
 
