@@ -77,7 +77,8 @@ Note: If you make at least three attempts at optimizing your model, you will not
 
 1. Overview of the analysis: The purpose of the model was to create an algorithm to help predict whether or not an applicant's attempt for charity funding would be successful.
 2. Results:<br>
-Data Preprocessing
+
+   Data Preprocessing
    
  * What variable(s) are considered the target(s) for your model?<br>
    The variable for the Target was identified as the column IS_SUCCESSFUL.
@@ -94,9 +95,10 @@ Data Preprocessing
    * SPECIAL_CONSIDERATIONS
    * ASK_AMT
  * What variable(s) should be removed from the input data because they are neither targets nor features?<br>
-   The column or variable that can be removed is EIN as it is an identifier for the applicant organization and has no impact on the behavior of the model.
+   The column or variable that can be removed is EIN as it is an identifier for the applicant organization and has no impact on the behavior of the model.<br>
+   
 
-Compiling, Training, and Evaluating the Model
+   Compiling, Training, and Evaluating the Model
 
  * How many neurons, layers, and activation functions did you select for your neural network model, and why?<br>
    In the Optimized model, I used 3 hidden layers, as compared to the 2 from the original model. The number of neurons was not changed, although I had to add neurons to the third layer. The activation function was also not changed. Increasing the depth of the model was done since our input data seems to have complex dependencies and hierarchies.
