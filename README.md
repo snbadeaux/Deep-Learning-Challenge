@@ -112,6 +112,11 @@ Note: If you make at least three attempts at optimizing your model, you will not
    
    
 3. Summary:<br>
-The optimized neural network model achieved 79% prediction accuracy with a 0.47 loss, 3 hidden layers at 10, 8, and 8, and 100 training epochs. Keeping the Name column was crucial in achieving and going beyond the target of 75% accuracy. This shows the importance of the shape of your datasets before you preprocess them.
+The optimized neural network model achieved 79% prediction accuracy with a 0.47 loss, 3 hidden layers at 10, 8, and 8, and 100 training epochs. Keeping the Name column was crucial in achieving and going beyond the target of 75% accuracy. This shows the importance of the shape of your datasets before you preprocess them.<br>
+Although this model worked very well and provided a great deal of accuracy, an alternative approach could be to use the Random Forest model as it is also suited for classification problems.<br>
+
+# Sources
+1. Dataset provided by edX Boot Camps LLC
+2. ChatGPT https://chat.openai.com/
 
 
